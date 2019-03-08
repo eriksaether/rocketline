@@ -1,0 +1,3 @@
+AuthName "Member's Area Name"
+AuthUserFile /path/to/password/file/.htpasswd
+AuthType Basic

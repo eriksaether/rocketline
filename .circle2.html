@@ -1,0 +1,94 @@
+
+
+
+
+<div class="axis" id="test">
+  <div class="triangle">
+    <div class="circle"><div class="half-circle"></div></div>
+    <div class="innercircle"></div>
+    
+  </div>
+</div>
+
+<button onclick="twistIt(-5);">left</button><button onclick="twistIt(5);">right</button>
+<div id="testvar"></div>
+
+
+
+<script type="text/javascript">
+  var thisnumber = 0;
+  function twistIt(rotatespeed) {
+    thisnumber = rotatespeed + thisnumber;
+    document.getElementById("testvar").innerHTML = thisnumber;
+    document.getElementById("test").style.transform = "rotate("+thisnumber+"deg)";
+    
+  }
+</script>
+<style type="text/css">
+.circle {
+	  top: 100px;
+    position:relative;
+    left: -50px;
+    background-color:gray;
+    width:200px;
+    height:200px;
+    -moz-border-radius:100px;
+    -webkit-border-radius:100px;
+    border-radius:100px;    
+}
+
+.half-circle {
+	 top: 0px;
+   left:0px;
+    position:relative;
+    background-color:blue;
+    width:100px;
+    height:200px;
+
+    border-radius:100px 0px 0 100px;
+}
+.pie {
+  top: 0px;
+  left: 87.75px;
+    position:absolute;
+    background-color:red;
+    width:100px;
+    height:200px;
+    border-radius:100px 0px 0px 100px;   
+}
+
+.innercircle {
+  background-color: red;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -20px;
+  left: -19px;
+  border-top: 1px solid white;
+}
+.axis {
+  position: absolute;
+  top: 300px;
+  left: 250px;
+  border-radius:100px 100px 100px 100px;
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+.triangle {
+   position: relative;
+  top: 0px;  
+  left: 0px;
+  width: 10; 
+  height: 0; 
+  border-top: 45px solid lightgreen;
+  border-bottom: 45px solid transparent;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-radius:100% 100% 10px 10px;
+}
+
+
+
+</style>
